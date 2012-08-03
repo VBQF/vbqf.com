@@ -7,10 +7,16 @@ Masquer le titre.
 le modèle pour insérer une citation est le suivant :
 
 	<div class="big-quote">
-	<blockquote><br />{CITATION}</blockquote>
+	<blockquote>
+	<p><br />{CITATION}<br />&nbsp;</p>
+	</blockquote>
 	</div>
-	<p><span class="author">{Auteur}</span></p>
+	<p><span class="author">{AUTEUR}</span></p>
 
-afin de stylisé votre bloc. Insérer les classes de style : "mod-contrast contrast-red".
+
+afin de stylisé votre bloc. Insérer les classes de style : 
+
+	mod-contrast contrast-red
+
 
 Pour plus d'informations sur les couleurs, voir la documentation "contrast.md"
