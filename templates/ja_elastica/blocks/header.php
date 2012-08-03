@@ -19,7 +19,7 @@ $siteName = $app->getCfg('sitename');
 if ($this->getParam('logoType', 'image')=='image'): ?>
 <h1 class="logo">
     <a href="<?php JURI::base(true) ?>" title="<?php echo $siteName; ?>">
-		<img src="<?php echo 'templates/'.T3_ACTIVE_TEMPLATE.'/images/logo-trans.png' ?>" alt="<?php echo $siteName; ?>" />
+		<img src="<?php echo 'templates/'.T3_ACTIVE_TEMPLATE.'/images/logo-vbqf.png' ?>" alt="<?php echo $siteName; ?>" />
 	</a>
 </h1>
 <?php else:

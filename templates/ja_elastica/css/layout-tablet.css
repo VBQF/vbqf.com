@@ -120,7 +120,11 @@ h1.logo {
 }
 
 h1.logo a {
-  padding: .5em !important;
+//  padding: .5em !important;
+}
+
+h1.logo a img {
+  height: 50px;
 }
 
 /* Search & Social Bars ---*/
