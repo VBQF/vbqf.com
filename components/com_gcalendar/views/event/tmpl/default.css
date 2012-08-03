@@ -1,0 +1,19 @@
+#content_table {
+	padding: 10px;
+	width: 100%;
+}
+
+#content_table tr,#content_table td {
+	border: 0px;
+}
+
+#content_table td {
+	vertical-align: top;
+	padding-bottom: 5px;
+	padding-right: 5px;
+}
+
+.event_content_key {
+	font-weight: bold;
+	width: 30px;
+}

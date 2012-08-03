@@ -1,0 +1,17 @@
+.fc-header tr,.fc-header td,.gcalendar-table tr,.gcalendar-table td,#gc_gcalendar_view_toggle_status
+	{
+	border: 0px;
+}
+
+.gcalendar-table td {
+	padding-bottom: 5px;
+	padding-right: 5px;
+}
+
+#tiptip_content {
+	text-align: left;
+}
+
+#tiptip_content ul {
+	margin-left: 10px;
+}

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="content" method="upgrade">
+<name>plg_gcalendar_next</name>
+<author>G4J Project</author>
+<authorEmail>info@g4j.laoneo.net</authorEmail>
+<creationDate>Aug 2012</creationDate>
+<copyright>This extension is released under the GNU/GPL License. </copyright>
+<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+<authorUrl>g4j.laoneo.net</authorUrl>
+<version>2.7.5</version>
+<description>PLG_GCALENDAR_NEXT_XML_DESCRIPTION</description>
+
+<files>
+<filename plugin="gcalendar_next">gcalendar_next.php</filename>
+<folder>language</folder>
+</files>
+
+<config>
+	<fields name="params" addfieldpath="/administrator/components/com_gcalendar/models/fields">
+		<fieldset name="basic">
+			<field name="calendarids" type="gcalendar" multiple="true" default="" label="PLG_GCALENDAR_NEXT_FIELD_CALENDAR_IDS_LABEL" description="PLG_GCALENDAR_NEXT_FIELD_CALENDAR_IDS_DESC" />>
+			<field name="class" type="text" size="80" default="" label="PLG_GCALENDAR_NEXT_FIELD_CLASS_LABEL" description="PLG_GCALENDAR_NEXT_FIELD_CLASS_DESC" />
+			<field name="output" type="textarea2" default="" label="PLG_GCALENDAR_NEXT_FIELD_OUTPUT_LABEL" description="PLG_GCALENDAR_NEXT_FIELD_OUTPUT_DESC" rows="5" cols="50" filter="raw">
+				<content>[$ startdate $] at [$ maplink $]</content>
+			</field>
+			<field name="output_now" type="textarea2" default="" label="PLG_GCALENDAR_NEXT_FIELD_OUTPUT_NOW_LABEL" description="PLG_GCALENDAR_NEXT_FIELD_OUTPUT_NOW_DESC" rows="5" cols="50" filter="raw">
+				<content>[$ title $] is happening right now here: [$ maplink $]</content>
+			</field>
+			<field name="start_soon" type="text" size="40" default="-4 hours" label="PLG_GCALENDAR_NEXT_FIELD_START_SOON_LABEL" description="PLG_GCALENDAR_NEXT_FIELD_START_SOON_DESC"/>
+			<field name="end_soon" type="text" size="40" default="-1 hour" label="PLG_GCALENDAR_NEXT_FIELD_END_SOON_LABEL" description="PLG_GCALENDAR_NEXT_FIELD_EMD_SOON_DESC"/>		
+			<field name="output_start_soon" type="textarea2" default="" label="PLG_GCALENDAR_NEXT_FIELD_OUTPUT_START_SOON_LABEL" description="PLG_GCALENDAR_NEXT_FIELD_OUTPUT_START_SOON_DESC" rows="5" cols="50" filter="raw">
+				<content>[$ title $] is starting soon.</content>
+			</field>
+			<field name="output_end_soon" type="textarea2" default="" label="PLG_GCALENDAR_NEXT_FIELD_OUTPUT_END_SOON_LABEL" description="PLG_GCALENDAR_NEXT_FIELD_OUTPUT_END_SOON_DESC" rows="5" cols="50" filter="raw">
+				<content>[$ title $] is coming to an end.</content>
+			</field>
+			
+			<field name="no_event" type="textarea2" default="" label="PLG_GCALENDAR_NEXT_FIELD_NO_EVENT_LABEL" description="PLG_GCALENDAR_NEXT_FIELD_NO_EVENT_DESC" rows="5" cols="50" filter="raw">
+				<content>No scheduled events could be found.</content>
+			</field>
+		</fieldset>
+		<fieldset name="advanced">
+			<field name="offset" type="text" size="10" default="0" label="PLG_GCALENDAR_NEXT_FIELD_OFFSET_LABEL" description="PLG_GCALENDAR_NEXT_FIELD_OFFSET_DESC"/>
+			<field name="find" type="text" size="40" default="" label="PLG_GCALENDAR_NEXT_FIELD_FIND_LABEL" description="PLG_GCALENDAR_NEXT_FIELD_FIND_DESC"/>		
+			<field name="title_filter" type="text" size="40" default=".*" label="PLG_GCALENDAR_NEXT_FIELD_TITLE_FILTER_LABEL" description="PLG_GCALENDAR_NEXT_FIELD_TITLE_FILTER_DESC"/>
+			<field name="max_events" type="text" size="10" default="10" label="Max Events" description="Download only the next specified number of events to choose the next one. (plugin: +max_events)"/>
+			<field name="dateformat" type="text" size="40" default="F d, Y @ g:ia" label="PLG_GCALENDAR_NEXT_FIELD_DATEFORMAT_LABEL" description="PLG_GCALENDAR_NEXT_FIELD_DATEFORMAT_DESC"/>
+			<field name="only-whole_day" type="text" size="40" default="[$start l, F d, Y$] all day" description="PLG_GCALENDAR_NEXT_FIELD_ONLY_WHOLE_DAY_DESC" label="PLG_GCALENDAR_NEXT_FIELD_ONLY_WHOLE_DAY_LABEL"/>
+			<field name="only-part_day" type="text" size="40" default="[$start l, F d, Y g:ia$] until [$finish g:ia $]" description="PLG_GCALENDAR_NEXT_FIELD_ONLY_PART_DAY_DESC" label="PLG_GCALENDAR_NEXT_FIELD_ONLY_PART_DAY_LABEL"/>
+			<field name="multi-whole_day" type="text" size="40" default="[$start l, F d - d, Y$] all day" description="PLG_GCALENDAR_NEXT_FIELD_MULTI_WHOLE_DAY_DESC" label="PLG_GCALENDAR_NEXT_FIELD_MULTI_WHOLE_DAY_LABEL"/>
+			<field name="multi-part_day" type="text" size="40" default="[$start l, F d, Y g:ia$] until [$finish l, F d, Y g:ia $]" description="PLG_GCALENDAR_NEXT_FIELD_MULTI_PART_DAY_DESC" label="PLG_GCALENDAR_NEXT_FIELD_MULTI_PART_DAY_LABEL"/>		
+		</fieldset>
+	</fields>
+</config>
+</extension>

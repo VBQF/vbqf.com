@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" method="upgrade" client="site">
+	<name>MOD_GCALENDAR_NEXT</name>
+	<author>G4J Project</author>
+	<creationDate>Aug 2012</creationDate>
+	<copyright>This extension is released under the GNU/GPL License.
+	</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html
+		GNU/GPL</license>
+	<authorEmail>info@g4j.laoneo.net
+	</authorEmail>
+	<authorUrl>g4j.laoneo.net</authorUrl>
+	<version>2.7.5</version>
+	<description>MOD_GCALENDAR_NEXT_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_gcalendar_next">mod_gcalendar_next.php
+		</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+	</files>
+	<config>
+		<fields name="params" addfieldpath="/administrator/components/com_gcalendar/models/fields">
+			<fieldset name="basic">
+				<field name="calendarids" type="gcalendar" multiple="true" default="" label="MOD_GCALENDAR_NEXT_FIELD_CALENDAR_IDS_LABEL" description="MOD_GCALENDAR_NEXT_FIELD_CALENDAR_IDS_DESC" />
+				<field name="style_parameters" type="text" size="80" default="" label="MOD_GCALENDAR_NEXT_FIELD_STYLE_PARAMETERS_LABEL" description="MOD_GCALENDAR_NEXT_FIELD_STYLE_PARAMETERS_DESC"/>
+				<field name="moduleclass_sfx" type="text" size="80" default="" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="offset" type="text" size="10" default="0" label="MOD_GCALENDAR_NEXT_FIELD_OFFSET_LABEL" description="MOD_GCALENDAR_NEXT_FIELD_OFFSET_DESC"/>
+				<field name="output" type="textarea2" default="" label="MOD_GCALENDAR_NEXT_FIELD_OUTPUT_LABEL" description="MOD_GCALENDAR_NEXT_FIELD_OUTPUT_DESC" rows="5" cols="50" filter="raw">
+					<content><![CDATA[{{#events}}<span class="countdown_row">{y<}<span class="countdown_section"><span class="countdown_amount">{yn}</span><br/>{yl}</span>{y>}{o<}<span class="countdown_section"><span class="countdown_amount">{on}</span><br/>{ol}</span>{o>}{w<}<span class="countdown_section"><span class="countdown_amount">{wn}</span><br/>{wl}</span>{w>}{d<}<span class="countdown_section"><span class="countdown_amount">{dn}</span><br/>{dl}</span>{d>}{h<}<span class="countdown_section"><span class="countdown_amount">{hn}</span><br/>{hl}</span>{h>}{m<}<span class="countdown_section"><span class="countdown_amount">{mn}</span><br/>{ml}</span>{m>}{s<}<span class="countdown_section"><span class="countdown_amount">{sn}</span><br/>{sl}</span>{s>}<div style="clear:both"><p><a href="{{{backlink}}}">{{title}}</a><br/>{{{description}}}</p></div></span>{{/events}}{{^events}}{{emptyText}}{{/events}}]]></content>
+					<description>
+						MOD_GCALENDAR_NEXT_FIELD_OUTPUT_LONG_DESC
+					</description>
+				</field>
+				<field name="past_events" type="list" default="1" label="MOD_GCALENDAR_NEXT_FIELD_PAST_EVENTS_LABEL" description="MOD_GCALENDAR_NEXT_FIELD_PAST_EVENTS_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>		
+				<field name="output_now" type="textarea2" default="" label="MOD_GCALENDAR_NEXT_FIELD_OUTPUT_NOW_LABEL" description="MOD_GCALENDAR_NEXT_FIELD_OUTPUT_NOW_DESC" rows="5" cols="50" filter="raw">
+					<content><![CDATA[{{#events}}<p>Event happening now:<br/>{{date}}<br/><a href="{{{backlink}}}">{{title}}</a>{{#maplink}}<br/>Join us at [<a href="{{{maplink}}}" target="_blank">map</a>]{{/maplink}}</p>{{/events}}{{^events}}{{emptyText}}{{/events}}]]></content>
+					<description>
+						MOD_GCALENDAR_NEXT_FIELD_OUTPUT_NOW_LONG_DESC
+					</description>
+				</field>
+				<field name="find" type="text" size="40" default="" label="MOD_GCALENDAR_NEXT_FIELD_FIND_LABEL" description="MOD_GCALENDAR_NEXT_FIELD_FIND_DESC"/>
+				<field name="title_filter" type="text" size="40" default=".*" label="MOD_GCALENDAR_NEXT_FIELD_TITLE_FILTER_LABEL" description="MOD_GCALENDAR_NEXT_FIELD_TITLE_FILTER_DESC"/>
+				<field name="max_events" type="text" size="10" default="10" label="MOD_GCALENDAR_NEXT_FIELD_MAX_EVENTS_LABEL" description="MOD_GCALENDAR_NEXT_FIELD_MAX_EVENTS_DESC"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

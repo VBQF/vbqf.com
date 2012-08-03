@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="package" method="upgrade">
+	<packagename>GCalendar</packagename>
+	<packager>Allon Moritz</packager>
+	<name>GCalendar</name>
+	<author>G4J Project</author>
+	<creationDate>Aug 2012</creationDate>
+	<copyright>This extension is released under the GNU/GPL License.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html
+		GNU/GPL</license>
+	<authorEmail>info@g4j.laoneo.net</authorEmail>
+	<authorUrl>g4j.laoneo.net</authorUrl>
+	<version>2.7.5</version>
+	<files>
+		<file id="plg_system_gcalendar" type="plugin" group="system" client="site">plg_system_gcalendar.zip</file>
+		<file id="com_gcalendar" type="component">com_gcalendar.zip</file>
+		<file id="mod_gcalendar" type="module" client="site">mod_gcalendar.zip</file>
+		<file id="mod_gcalendar_upcoming" type="module" client="site">mod_gcalendar_upcoming.zip</file>
+		<file id="mod_gcalendar_next" type="module" client="site">mod_gcalendar_next.zip</file>
+		<file id="plg_search_gcalendar" type="plugin" group="search" client="site">plg_search_gcalendar.zip</file>
+		<file id="plg_gcalendar_next" type="plugin" group="content" client="site">plg_gcalendar_next.zip</file>
+	</files>
+</extension>

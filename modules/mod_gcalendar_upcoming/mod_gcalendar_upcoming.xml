@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" method="upgrade"
+	client="site">
+	<name>MOD_GCALENDAR_UPCOMING</name>
+	<author>G4J Project</author>
+	<creationDate>Aug 2012</creationDate>
+	<copyright>This extension is released under the GNU/GPL License.
+	</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html
+		GNU/GPL</license>
+	<authorEmail>info@g4j.laoneo.net
+	</authorEmail>
+	<authorUrl>g4j.laoneo.net</authorUrl>
+	<version>2.7.5</version>
+	<description>MOD_GCALENDAR_UPCOMING_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_gcalendar_upcoming">mod_gcalendar_upcoming.php
+		</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+	</files>
+	<config>
+		<fields name="params"
+			addfieldpath="/administrator/components/com_gcalendar/models/fields">
+			<fieldset name="basic">
+				<field name="calendarids" type="gcalendar" default="" multiple="true"
+					label="MOD_GCALENDAR_UPCOMING_FIELD_CALENDAR_IDS_LABEL"
+					description="MOD_GCALENDAR_UPCOMING_FIELD_CALENDAR_IDS_DESC" />
+				<field name="date_format" type="text" size="80"
+					label="MOD_GCALENDAR_UPCOMING_FIELD_DATE_FORMAT_LABEL" description="MOD_GCALENDAR_UPCOMING_FIELD_DATE_FORMAT_DESC" />
+				<field name="time_format" type="text" size="80"
+					label="MOD_GCALENDAR_UPCOMING_FIELD_TIME_FORMAT_LABEL" description="MOD_GCALENDAR_UPCOMING_FIELD_TIME_FORMAT_DESC" />
+				<field name="max_events" type="text" size="2" default="5"
+					label="MOD_GCALENDAR_UPCOMING_FIELD_MAX_EVENTS_LABEL" description="MOD_GCALENDAR_UPCOMING_FIELD_MAX_EVENTS_DESC" />
+				<field name="order" type="radio" default="1"
+					label="MOD_GCALENDAR_UPCOMING_FIELD_ORDER_LABEL" description="MOD_GCALENDAR_UPCOMING_FIELD_ORDER_DESC">
+					<option value="1">MOD_GCALENDAR_UPCOMING_FIELD_ORDER_TIME
+					</option>
+					<option value="0">MOD_GCALENDAR_UPCOMING_FIELD_ORDER_LAST_MODIFIED
+					</option>
+				</field>
+				<field name="find" type="text" size="80" default=""
+					label="MOD_GCALENDAR_UPCOMING_FIELD_FILTER_LABEL" description="MOD_GCALENDAR_UPCOMING_FIELD_FILTER_DESC" />
+				<field name="@spacer" type="spacer" default="" label=""
+					description="" />
+				<field name="moduleclass_sfx" type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="output" type="textarea2" default=""
+					label="MOD_GCALENDAR_UPCOMING_FIELD_OUTPUT_LABEL" description="MOD_GCALENDAR_UPCOMING_FIELD_OUTPUT_DESC"
+					rows="20" cols="70" filter="raw">
+					<content>
+					<![CDATA[{{#events}}
+{{#header}}<p style="clear: both;"><strong>{{header}}</strong></p>{{/header}}
+<p style="clear: both;"/>
+<div style="float:left;margin-right:6px;width:42px;height:42px;background-image:url('modules/mod_gcalendar_upcoming/tmpl/images/calendar-icon.gif')">
+	<div style="background-color: #{{calendarcolor}};width:32px;height:10px;margin-top:6px;margin-left:5px;"></div>
+	<div style="color: #FFFFFF;padding:2px;font-weight:bold;font-size:10px;text-align:center;position:relative;margin-top:-13px;margin-bottom:-4px;">{{month}}</div>
+	<div style="color: #{{calendarcolor}};font-weight:bold;font-size:1.3em;width:42px;text-align:center;">{{day}}</div>
+</div>
+<p>{{date}}<br/><a href="{{{backlink}}}">{{title}}</a></p>
+<p style="clear: both;"/>
+{{/events}}
+{{^events}}
+{{emptyText}}
+{{/events}}]]>
+					</content>
+					<description>
+						MOD_GCALENDAR_UPCOMING_FIELD_OUTPUT_LONG_DESC
+					</description>
+				</field>
+				<field name="output_grouping" type="text" size="80" default=""
+					label="MOD_GCALENDAR_UPCOMING_FIELD_OUTPUT_GROUPING_LABEL" description="MOD_GCALENDAR_UPCOMING_FIELD_OUTPUT_GROUPING_DESC">
+				</field>
+				<field name="start_date" type="text" size="80" default=""
+					label="MOD_GCALENDAR_UPCOMING_FIELD_START_DATE_LABEL"
+					description="MOD_GCALENDAR_UPCOMING_FIELD_START_DATE_DESC" />
+				<field name="end_date" type="text" size="80" default=""
+					label="MOD_GCALENDAR_UPCOMING_FIELD_END_DATE_LABEL"
+					description="MOD_GCALENDAR_UPCOMING_FIELD_END_DATE_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

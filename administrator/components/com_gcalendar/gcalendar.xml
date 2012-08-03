@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.6.0" method="upgrade">
+	<name>COM_GCALENDAR</name>
+	<creationDate>Aug 2012</creationDate>
+	<author>G4J Project</author>
+	<authorEmail>info@g4j.laoneo.net</authorEmail>
+	<authorUrl>g4j.laoneo.net</authorUrl>
+	<copyright>This extension is released under the GNU/GPL License.
+	</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html
+		GNU/GPL</license>
+	<version>2.7.5</version>
+	<description>COM_GCALENDAR_XML_DESCRIPTION</description>
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>gcalendar.php</filename>
+		<filename>controller.php</filename>
+		<filename>router.php</filename>
+		<folder>views</folder>
+		<folder>libraries</folder>
+		<folder>models</folder>
+		<folder>language</folder>
+	</files>
+	<media destination="com_gcalendar" folder="media">
+		<filename>index.html</filename>
+		<folder>images</folder>
+	</media>
+	<install>
+		<sql>
+			<file charset="utf8" driver="mysql">sql/install.sql</file>
+			<file driver="mysql">sql/install.sql</file>
+			<file driver="sqlsrv">sql/install.sqlsrv.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file charset="utf8" driver="mysql">sql/uninstall.sql</file>
+			<file driver="mysql">sql/uninstall.sql</file>
+			<file driver="sqlsrv">sql/uninstall.sqlsrv.sql</file>
+		</sql>
+	</uninstall>
+	<scriptfile>script.php</scriptfile>
+	<administration>
+		<menu link="option=com_gcalendar">COM_GCALENDAR</menu>
+		<submenu>
+			<menu view="cpanel">COM_GCALENDAR_SUBMENU_CPANEL</menu>
+			<menu view="gcalendars">COM_GCALENDAR_SUBMENU_GCALENDARS</menu>
+			<menu view="tools">COM_GCALENDAR_SUBMENU_TOOLS</menu>
+			<menu view="support">COM_GCALENDAR_SUBMENU_SUPPORT</menu>
+		</submenu>
+		<files folder="admin">
+			<!-- Site Main File Copy Section -->
+			<filename>index.html</filename>
+			<filename>gcalendar.php</filename>
+			<filename>controller.php</filename>
+			<filename>util.php</filename>
+			<filename>dbutil.php</filename>
+			<filename>config.xml</filename>
+			<filename>access.xml</filename>
+			<folder>controllers</folder>
+			<folder>models</folder>
+			<folder>views</folder>
+			<folder>tables</folder>
+			<folder>libraries</folder>
+			<folder>sql</folder>
+			<folder>language</folder>
+		</files>
+	</administration>
+</install>

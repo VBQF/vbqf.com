@@ -1,0 +1,22 @@
+.fc-header tr,.fc-header td,.gcalendar-table tr,.gcalendar-table td,#gc_gcalendar_view_toggle_status
+	{
+	border: 0px;
+}
+
+.fc-event-time,.fc-event-title {
+	display: block;
+	float:left;
+}
+
+.gcalendar-table td {
+	padding-bottom: 5px;
+	padding-right: 5px;
+}
+
+.ui-datepicker {
+	z-index: 1003 !important; /* must be > than popup editor (1002) */
+}
+
+#tiptip_content {
+	text-align: left;
+}

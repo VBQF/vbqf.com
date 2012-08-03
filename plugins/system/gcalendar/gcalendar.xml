@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="plugin" version="1.6.0" group="system" method="upgrade">
+	<name>plg_system_gcalendar</name>
+	<author>G4J Project</author>
+	<creationDate>Aug 2012</creationDate>
+	<copyright>This extension is released under the GNU/GPL License.
+	</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html
+		GNU/GPL</license>
+	<authorEmail>info@g4j.laoneo.net
+	</authorEmail>
+	<authorUrl>g4j.laoneo.net</authorUrl>
+	<version>2.7.5</version>
+	<description>PLG_SYSTEM_GCALENDAR_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="gcalendar">gcalendar.php</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="load-jquery" type="list" default="1" 
+	            	label="PLG_SYSTEM_GCALENDAR_FIELD_LOAD_JQUERY_LABEL" 
+	            	description="PLG_SYSTEM_GCALENDAR_FIELD_LOAD_JQUERY_DESC">
+	                <option value="0">JNONE</option>
+	                <option value="1">JALL</option>
+	                <option value="2">PLG_SYSTEM_GCALENDAR_FIELD_LOAD_JQUERY_GCALENDAR_ONLY</option>
+	            </field>
+			</fieldset>
+   		</fields>
+   </config>
+</extension>
